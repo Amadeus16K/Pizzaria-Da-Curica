@@ -1,0 +1,369 @@
+/*
+Sumário
+
+1. Header
+2.DROPDOWN
+3.DROPDOWN MENU
+4.DESIGN RESPONSIVO 
+
+*/
+
+
+
+
+:root{
+    --color-primary: #670808; 
+    /*usar variáveis css para cores default: primaria, secundária, background, etc. Isso permite que, desde que seja necessário
+    realizar alterações de cores, não é preciso ir em cada canto do css para alterá-la. Basta alterar o valor da variável*
+    Tbm serve para outras coisas, além da cor*/
+
+}
+
+*
+
+{
+    max-width: 450px;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'open-sans', 'sans-serif';
+}
+
+
+/*2.DROPDOWN*/
+
+body
+{
+    height: 100vh;
+    background-color: #000;
+    background-image: url(https://media.istockphoto.com/id/1257674631/pt/vetorial/pizza-seamless-pattern-on-white-background.jpg?s=612x612&w=0&k=20&c=Pdqargt_5bNsDtzcdlkZRuWutRLJ1X9AYoiqHKwYtRI=);
+    background-size: cover;
+    background-position: center;
+}
+
+li
+{
+list-style: none;
+}
+
+a
+{
+    text-decoration: none;
+    color: var(--color-primary);
+    font-size: 1rem;
+}
+
+a:hover
+{
+    color: orangered;
+
+}
+
+
+/*1. HEADER*/
+
+
+header
+{
+    position: relative;
+    padding: 0 2rem;
+}
+
+.logo
+{
+    position: relative;
+    top: 70px;
+    left: 83%;
+    font-size: large;
+}
+
+.titulo-principal
+{   
+    position: relative;
+    width: 207px;
+    height: 30px;
+    border-radius: 10px;
+    top: 190px;    
+    left: 190px;
+    display: inline;
+    border: 2px solid #000000;
+    white-space: nowrap;
+    background-color: #8e0707f1;
+}
+
+.Subtitulo-Principal
+{
+    position: relative;
+    top: 250px;
+    right: -7%;
+    justify-content: center;
+    white-space: nowrap;
+    background-color: #910202ed;
+    border-radius: 10px;
+    border: 2px solid #000000;
+    height: 35px;
+}
+
+.button
+{
+    position: relative;
+    top: 300px;
+    right: 90px;
+    white-space: nowrap;
+    cursor: auto;
+    padding: 5px;
+    width: 150px;
+    height: 30px;
+    border: 2px solid #000000; /* Cor da borda quando fechado */
+    background-color: #fff; /* Cor de fundo quando fechado */
+    color: #089006; /* Cor do texto quando fechado */
+    border-radius: 5px;
+    text-align: center;
+    transition: background-color 0.3s, color 0.3s;
+}
+
+
+.navbar
+{
+    position: absolute;
+    top: 30px;
+    left: -180px;
+    width: 100%;
+    height: 60px;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.navbar.logo a 
+{
+    font-size: 2rem;
+    font-weight: bold;
+}
+
+.navbar.links
+{
+     display: flex;
+     gap: 2rem;
+}
+
+.navbar .toggle_btn
+{
+    color: #000;
+    font-size: 1.5rem;
+    cursor: pointer;
+    display: none;
+}
+
+.btn_action
+{
+    background-color: var(--color-primary);
+    color: #fff;
+    height: 30px;
+    padding: 0.5rem 1rem;
+    border: none;
+    outline: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    font-weight: bold;
+    cursor: pointer;
+    transition: scale 0.2 ease;
+
+}
+
+.btn_action:hover 
+{
+    scale: 1.05;
+    color: #fff;
+
+
+}
+
+.btn_action:active
+{
+    scale: 0.95;
+}
+
+/* 3.DROPDOWN MENU */
+.dropdown_menu
+{
+    display: none;
+    position: absolute;
+    right: 2rem;
+    top: 68px;
+    height: 0 ;
+    width: 300px;
+    backdrop-filter: blur(20px);
+    border-radius: 15px;
+    overflow: hidden ;
+    transition: height .2s cubic-bezier(0.175, 0.885, 0.32, 1.275);    
+}
+
+.dropdown_menu.open
+{
+    height: 260px;
+
+}
+
+.dropdown_menu li
+{
+    position: relative;
+    top: -2px;
+    padding: 0.9rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+;.dropdown_menu .btn_action
+{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+
+}
+
+/* 4.DESIGN RESPONSIVO */
+@media(max-width: 992px){
+    .navbar .links,
+    .navbar .btn_action{
+        display: none;
+    }
+
+    .navbar .toggle_btn{
+        display: block;
+    }
+
+    .dropdown_menu {
+        display: block;
+    }
+}
+
+@media(max-width: 576px){
+    .dropdown_menu{
+        left: 2rem;
+        width: unset;
+    }
+
+
+}
+
+
+/* CARDÁPIO/ITENS */
+
+#menu {
+    position: relative;
+    top: 350px;
+    padding: 50px;
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background-color: rgba(255, 251, 0, 0.518);
+}
+
+.categoria1 
+{
+    position: relative;
+    background: #430707;
+    border-radius: 10px;
+    border: #000 solid 3px;
+    height: 37px;
+    width: 128px;
+    padding: 2px;
+}
+
+.categoria2
+{
+    position: relative;
+    top: 30px;
+    white-space: nowrap;
+    background: #430707;
+    border-radius: 10px;
+    border: #000 solid 3px;
+    height: 37px;
+    width: 146px;
+    padding: 2px;
+}
+
+.categoria3
+{
+    position: relative;
+    top: 30px;
+    white-space: nowrap;
+    background: #430707;
+    border-radius: 10px;
+    border: #000 solid 3px;
+    height: 37px;
+    width: 105px;
+    padding: 2px;
+}
+
+.categoria4
+{
+    position: relative;
+    top: 30px;
+    white-space: nowrap;
+    background: #430707;
+    border-radius: 10px;
+    border: #000 solid 3px;
+    height: 37px;
+    width: 175px;
+    padding: 2px;
+}
+
+.categoria5
+{
+    position: relative;
+    top: 30px;
+    white-space: nowrap;
+    background: #430707;
+    border-radius: 10px;
+    border: #000 solid 3px;
+    height: 37px;
+    width: 92px;
+    padding: 2px;
+}
+
+
+.card {
+    position: relative;
+    top: 30px;
+    width: 300px;
+    margin: 10px;
+    padding: 15px;
+    background-color: #430707;
+    border: 1px solid #ddd;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+
+h3 {
+    color: #000000; /* Cor do título do item */
+}
+
+
+.price {
+    font-weight: bold;
+    color: #971010; /* Cor do preço */
+}
+
+
+.barra
+{
+    position: relative;
+    top: 353px;
+    font-size: 50px;
+
+}
+
+
+footer {
+    position: relative;
+    top: 350px;
+    background-color: #333; 
+    color: #fff; 
+    text-align: center; 
+    padding: 70px; 
+}
