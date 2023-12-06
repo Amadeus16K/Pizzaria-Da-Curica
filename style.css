@@ -264,8 +264,9 @@ header
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    background-color: rgb(224 116 7 / 87%);
+    background-color: rgba(7, 54, 224, 0.87);
 }
+
 
 .categoria1 
 {
