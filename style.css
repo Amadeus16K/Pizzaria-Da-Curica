@@ -72,7 +72,7 @@ header
 
 .logo
 {
-    position: flex;
+    position: relative;
     top: 70px;
     left: 83%;
     font-size: large;
