@@ -22,7 +22,7 @@ Sumário
 *
 
 {
-    max-width: 425px;
+    max-width: 425px 576px;
     margin: 0;
     overflow x: hidden;
     padding: 0;
