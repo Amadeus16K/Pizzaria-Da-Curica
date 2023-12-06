@@ -22,8 +22,9 @@ Sumário
 *
 
 {
-    max-width: 450px;
+    max-width: 425px;
     margin: 0;
+    overflow x: hidden;
     padding: 0;
     box-sizing: border-box;
     font-family: 'open-sans', 'sans-serif';
@@ -86,9 +87,10 @@ header
     top: 190px;    
     left: 190px;
     display: inline;
+    font-size: 24px;
     border: 2px solid #000000;
     white-space: nowrap;
-    background-color: #8e0707f1;
+    background-color: #fffffff1;
 }
 
 .Subtitulo-Principal
@@ -98,10 +100,13 @@ header
     right: -7%;
     justify-content: center;
     white-space: nowrap;
-    background-color: #910202ed;
+    font-size: 13px;
+    background-color: #ffffffed;
     border-radius: 10px;
     border: 2px solid #000000;
     height: 35px;
+    width: 299px;
+    padding: 3px;
 }
 
 .button
@@ -259,7 +264,7 @@ header
     display: flex;
     justify-content: space-around;
     flex-wrap: wrap;
-    background-color: rgba(255, 251, 0, 0.518);
+    background-color: rgb(224 116 7 / 87%);
 }
 
 .categoria1 
@@ -346,7 +351,8 @@ h3 {
 
 .price {
     font-weight: bold;
-    color: #971010; /* Cor do preço */
+    font-size: 25px;
+    color: #fffe00; /* Cor do preço */
 }
 
 
